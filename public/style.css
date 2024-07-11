@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url('Untitled_design.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 50px;
+}
+
+#heading{
+    font-family: cursive;
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 20px;
+    text-align: center;
+    top: 10%;
+}
+
+
+.levels-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.levels-container a {
+    text-decoration: none;
+}
+
+.levels-container .level-tile {
+    background-color: goldenrod;
+    color: white;
+    padding: 15px 25px;
+    font-size: 25px;
+    border-radius: 4px;
+    border: 2px solid rgb(143, 103, 3);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.levels-container .level-tile:hover {
+    background-color: #a17900; /* Add a slightly different color on hover */
+    transform: scale(1.05); /* Add a subtle scale effect on hover */
+    cursor: pointer;
+}
+
+.start-button{
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: goldenrod;
+    color: white;
+    font-family: cursive;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.start-button :hover{
+    border: 2px whitesmoke;
+    background-color: #a17900; 
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 800px;
+    gap: 50px;
+    background: transparent;
+    border-radius: 5px;
+}
+.container{
+    border: 5px ridge goldenrod;
+    height: max-content;
+    width: max-content;
+    /*position: relative;*/
+    display: none;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.maze-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.row{
+    display: flex;
+    /* margin-left: 12%;
+    margin-right: 12%; */
+}
+
+.cell{
+    width: 50px;
+    height:50px;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+.row :hover{
+    background-color: rgb(179, 177, 174);
+    cursor: pointer;
+}
+
+.wall{
+    background-color: white;
+    color: black;
+}
+
+.val{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.time-container{
+    margin-top: 5%;
+}
+.timer{
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    background: goldenrod;
+    /* padding-top: 20px ; */
+}
+
+.rat-container,
+.cheese-container {
+  position: absolute;
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+}
+.rat-container{
+    top: 0;
+    left: -50px;
+}
+.cheese-container{
+    bottom: 0;
+    right: -50px;
+}
+.rat-container img,
+.cheese-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cheese-container img{
+    position: absolute;
+  bottom: 0;
+  margin-right: -50;
+}
+
+#congratulations{
+    display: none;
+    flex-direction: column;
+    width: 500px;
+    height: max-content;
+    border: ridge goldenrod 4px;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: cursive;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    align-self: center;
+    background-color: goldenrod;
+}
+.message{
+    color: whitesmoke;
+}
+
+hr{
+    background-color: white;
+    height: 5px;
+    border-radius: 50%;
+    width: 80%;
+}
+
+#fail{
+    display: none;
+    flex-direction: column;
+    width: 500px;
+    height: max-content;
+    border: ridge goldenrod 4px;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: cursive;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    align-self: center;
+    background-color: goldenrod;
+}
+
+#fail #buttons{
+    display: flex;
+    justify-content: space-evenly;
+    background: transparent;
+    width: 200px;
+    height: auto;
+}
+
+.button{
+    background-color: goldenrod;
+    border-radius: 6px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.button :hover{
+    cursor: pointer;
+}
+.button img{
+    width: 50px;
+    height: 50px; 
+}
+
+#fail-buttons, #pass-buttons{
+    display: none;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+#reset-button{
+    display: none;
+}

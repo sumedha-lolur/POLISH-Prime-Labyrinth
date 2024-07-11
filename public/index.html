@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Labyrinth</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+  <body>
+    <div class="main-container">
+      <h1 id="heading">Prime Labyrinth</h1>
+      <h2 id="level-heading">Level </h2>
+      <div class="start-button" id="start-button">Start game!</div>
+
+      <div class="container" id="container">
+        <div class="maze-container" id="maze-container">
+          <div class="rat-container" id="rat-container">
+            START
+          </div>
+          <div class="cheese-container" id="cheese-container">
+            EXIT
+          </div>
+        </div>
+      </div>
+
+      <div class="timer-container">
+        <div class="timer" id="timer">00:00</div>
+      </div>
+
+      <div class="congratulations" id="congratulations">
+        <h1 class="message">Congratulations!</h1>
+        <hr />
+        <div class="message" id="points"></div>
+      </div>
+
+      <div class="buttons" id="pass-buttons">
+        <div class="button" id="next-button">
+          <!-- <img src="Prime labyrinth\game\assets\nextLevel_icon.png" alt="" srcset="" title="Next Level" /> -->
+           NEXT
+        </div>
+        <a href="index_prev.html"
+          ><div class="button" id="home-button">
+            <img
+              src="https://www.freeiconspng.com/uploads/house-icon-png-white-32.png"
+              alt=""
+              srcset=""
+              title="Home"
+            /></div
+        ></a>
+        <div class="button" id="reset-button">
+            RESET
+        </div>
+      </div>
+
+      <div class="fail" id="fail">
+        <h1 class="message">Time's up!</h1>
+        <hr />
+        <div class="message">
+          Level Failed <br />
+          It's OK! Try again 😊
+        </div>
+      </div>
+      <div class="buttons" id="fail-buttons">
+        <div class="button" id="retry-button">
+          <img src="game/assets/retry_icon.png" alt="" srcset="" title="Retry Level" />
+        </div>
+        <div class="button" id="home-button">
+          <img
+            src="https://www.freeiconspng.com/uploads/house-icon-png-white-32.png"
+            alt=""
+            title="Home"
+          />
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
